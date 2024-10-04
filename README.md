@@ -40,10 +40,10 @@
 В ответе написать использованные sql queries, обернуть их соответствующим markdown стилем
 
 ### Ответ:
-### 1. получить список юзернеймов пользователей: 
+### 1. Получить список юзернеймов пользователей: 
 SELECT (username) from users
 
-### 2. получить кол-во отправленных сообщений каждым пользователем: username - number of sent messages:
+### 2. Получить кол-во отправленных сообщений каждым пользователем: username - number of sent messages:
 SELECT users.username, COUNT(messages.text) FROM users JOIN messages ON users.id = messages.from GROUP BY users.username
 
 ### 3. Получить пользователя с самым большим кол-вом полученных сообщений и само количество: username - number of received messages:
